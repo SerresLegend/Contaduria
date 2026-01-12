@@ -3,218 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultora Contable | Profesional & Confiable</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --azul-marino: #1a2a44;
-            --azul-acento: #243b5e;
-            --dorado: #c5a059;
-            --dorado-claro: #d4b06a;
-            --blanco: #ffffff;
-            --gris-fondo: #f8f9fa;
-            --texto-gris: #555;
-            --whatsapp-green: #25d366;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth; /* Desplazamiento suave */
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--azul-marino);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* --- HEADER Y NAVEGACIÓN --- */
-        header {
-            background: linear-gradient(to right, var(--azul-marino), var(--azul-acento));
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--blanco);
-            text-decoration: none;
-        }
-
-        .logo span { color: var(--dorado); }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: var(--blanco);
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--dorado);
-        }
-
-        /* --- HERO --- */
-        #inicio {
-            background: linear-gradient(rgba(26, 42, 68, 0.88), rgba(26, 42, 68, 0.88)), 
-                        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 85vh;
-            display: flex;
-            align-items: center;
-            color: var(--blanco);
-            text-align: center;
-        }
-
-        #inicio h1 { color: var(--blanco); font-size: 3rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-
-        .btn-cta {
-            background: var(--dorado);
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 700;
-            display: inline-block;
-            border: 2px solid var(--dorado);
-            transition: all 0.3s;
-        }
-
-        .btn-cta:hover {
-            background: transparent;
-            color: var(--dorado);
-            transform: translateY(-2px);
-        }
-
-        /* --- SECCIONES GENÉRICAS --- */
-        section { padding: 80px 0; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-
-        /* --- ACERCA DE NOSOTROS --- */
-        #acerca { background: var(--blanco); }
-        .acerca-content { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
-        .acerca-text { flex: 1; min-width: 300px; }
-        .acerca-img { flex: 1; min-width: 300px; border-radius: 10px; box-shadow: 10px 10px 0 var(--dorado); }
-
-        /* --- CONTACTO Y UBICACIÓN --- */
-        #contacto { background: var(--gris-fondo); }
-        .contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .info-item { margin-bottom: 20px; }
-        .info-item h3 { color: var(--dorado); margin-bottom: 5px; }
-        .mapa-fake { background: #ddd; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
-
-        /* --- WHATSAPP --- */
-        .whatsapp-btn {
-            position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp-green);
-            color: white; width: 60px; height: 60px; border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            text-decoration: none; font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 1000;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; } /* En móvil se puede simplificar */
-            .contacto-grid { grid-template-columns: 1fr; }
-            #inicio h1 { font-size: 2rem; }
-        }
-    </style>
+    <title>Yireh Consultora I Consultoria contable y fical en Bolivia </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
+<body class="theme-dark">
 
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#inicio" class="logo">CONSULTORA <span>CONTABLE</span></a>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#acerca">Acerca de nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contáctanos</a></li>
-                </ul>
-            </nav>
+   <header>
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="YINEH">
+                    <span>CONSULTORÍA</span>
+                </a>
+                
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="index.html" class="active">Inicio</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a href="https://wa.me/59170000000" class="btn-header" target="_blank">
+                Contactar <i class="ph-bold ph-whatsapp-logo"></i>
+            </a>
         </div>
     </header>
 
-    <section id="inicio">
-        <div class="container">
-            <h1>Tu Tranquilidad Contable <br> en Buenas Manos</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 30px;">Asesoría estratégica para el éxito de su empresa en Bolivia.</p>
-            <a href="#contacto" class="btn-cta">CONSULTA GRATUITA</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <span class="badge">CONSULTORÍA CONTABLE DIGITAL</span>
+                <h1>Claridad Financiera,<br><span>Futuro Seguro</span></h1>
+                <p>Expertos en contabilidad digital y estrategias fiscales. Deja atrás el papel y toma el control de tu negocio con datos reales.</p>
+                <a href="#contacto" class="btn-primary">Empezar Ahora <i class="ph-bold ph-arrow-right"></i></a>
+            </div>
+        </section>
 
-    <section id="acerca">
-        <div class="container">
-            <div class="acerca-content">
-                <div class="acerca-text">
-                    <h2 style="margin-bottom: 20px;">Sobre Nuestra Consultora</h2>
-                    <p>Somos un equipo de profesionales comprometidos con la excelencia y la ética contable. Con años de experiencia en el mercado boliviano, ayudamos a empresas y profesionales independientes a optimizar sus finanzas y cumplir con todas sus obligaciones tributarias de manera eficiente.</p>
+        <section class="services-home">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nuestras Líneas de Servicio</h2>
+                    <p>Soluciones integrales para cubrir todas las necesidades de tu negocio.</p>
                 </div>
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Contadora" class="acerca-img">
+
+                <div class="services-grid">
+                    <a href="servicios.html?id=1" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-calculator"></i></div>
+                        <h3>Contabilidad</h3>
+                        <p>Gestión automatizada y sin papeles.</p>
+                    </a>
+                    <a href="servicios.html?id=2" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-chart-line-up"></i></div>
+                        <h3>Impuestos</h3>
+                        <p>Optimización fiscal inteligente.</p>
+                    </a>
+                    <a href="servicios.html?id=3" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-rocket-launch"></i></div>
+                        <h3>Startups</h3>
+                        <p>Constitución rápida de empresas.</p>
+                    </a>
+                    <a href="servicios.html?id=4" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-users-three"></i></div>
+                        <h3>Talento</h3>
+                        <p>Gestión moderna de nóminas.</p>
+                    </a>
+                    <a href="servicios.html?id=5" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-file-search"></i></div>
+                        <h3>Auditoría</h3>
+                        <p>Transparencia y control financiero.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-home">
+            <div class="container">
+                <h2 class="section-title">Nuestro Equipo Profesional</h2>
+                <div class="team-grid">
+                    
+                    <div class="team-card">
+                        <div class="team-img"><img src="assets/img/elizabeth.jpg" alt="Lic. Elizabeth"></div>
+                        <div class="team-info">
+                            <h4>Lic. Elizabeth</h4>
+                            <span>DIRECTORA GENERAL</span>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-img"><img src="assets/img/carlos.jpg" alt="Lic. Carlos M."></div>
+                        <div class="team-info">
+                            <h4>Lic. Carlos M.</h4>
+                            <span>AUDITOR SENIOR</span>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-img"><img src="assets/img/ana.jpg" alt="Lic. Ana R."></div>
+                        <div class="team-info">
+                            <h4>Lic. Ana R.</h4>
+                            <span>ASESORA LEGAL</span>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-img"><img src="assets/img/consultor4.jpg" alt="Consultor"></div>
+                        <div class="team-info">
+                            <h4>Lic. Roberto S.</h4>
+                            <span>ESPECIALISTA TRIBUTARIO</span>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-img"><img src="assets/img/consultor5.jpg" alt="Consultor"></div>
+                        <div class="team-info">
+                            <h4>Ing. Sofia L.</h4>
+                            <span>ANALISTA DE DATOS</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-home">
+            <div class="container">
+                <h2 class="section-title">Últimos Blogs</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-img-box"><img src="assets/img/blog1.jpg" alt="Noticia"></div>
+                        <div class="blog-body">
+                            <span class="cat">IMPUESTOS</span>
+                            <h3>Vencimientos Enero: Lo que debes saber</h3>
+                            <a href="blog.html" class="link-more">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-cta">
+            <div class="container">
+                <h2>Queremos escucharte y ayudarte a crecer</h2>
+                <p>Agenda una llamada con nuestro equipo y descubre cómo nuestra consultoría puede transformar la gestión de tu negocio.</p>
+                <a href="https://wa.me/59170000000" class="btn-agendar" target="_blank">Agendar consulta ahora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>CONSULTORÍA YINEH</h3>
+                    <p>Tu aliada estratégica en contabilidad y finanzas. Comprometidos con el crecimiento ordenado y legal de tu empresa en Bolivia.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>ENLACES</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="blog.html">Blog de Noticias</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-contact-info">
+                    <h3>CONTACTO</h3>
+                    <p>Santa Cruz, Bolivia</p>
+                    <p><a href="tel:+59170000000">+591 700 00000</a></p>
+                    <p><a href="mailto:info@yineh.com">info@yineh.com</a></p>
+                    
+                    <div class="social-row">
+                        <a href="#" class="social-btn"><i class="ph-bold ph-facebook-logo"></i></a>
+                        <a href="#" class="social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
+                        <a href="#" class="social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 CONSULTORÍA YINEH. TODOS LOS DERECHOS RESERVADOS.</p>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <section id="contacto">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contáctanos y Ubicación</h2>
-                <p>Estamos listos para atender sus consultas profesionales.</p>
-            </div>
-            <div class="contacto-grid">
-                <div class="contacto-info">
-                    <div class="info-item">
-                        <h3>📍 Dirección</h3>
-                        <p>Av. Principal, Edificio Empresarial No. 123<br>Santa Cruz de la Sierra, Bolivia</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>📞 Teléfonos</h3>
-                        <p>+591 700 00000 / 3 3XX XXXX</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>✉️ Correo Electrónico</h3>
-                        <p>info@consultoracontable.com</p>
-                    </div>
-                </div>
-                <div class="mapa-fake">
-                    <p style="color: #777; font-weight: bold;">[ AQUÍ SE INTEGRARÁ GOOGLE MAPS ]</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <a href="https://wa.me/59170000000" class="wa-float" target="_blank">
+        <i class="ph-bold ph-whatsapp-logo"></i>
+    </a>
 
-    <a href="https://wa.me/591XXXXXXXX" class="whatsapp-btn" target="_blank">💬</a>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
