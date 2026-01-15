@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yireh Consultora I Consultoria contable y fical en Bolivia </title>
+    <title>Yireh Consultora | Consultoría contable y fiscal en Bolivia</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
@@ -12,7 +12,7 @@
 </head>
 <body class="theme-dark">
 
-   <header>
+<header>
         <div class="nav-container">
             <div class="nav-left">
                 <a href="index.html" class="logo">
@@ -30,8 +30,27 @@
                 </nav>
             </div>
 
-            <a href="https://wa.me/59170000000" class="btn-header" target="_blank">
+            <a href="https://wa.me/59170000000" class="btn-header desktop-only" target="_blank">
                 Contactar <i class="ph-bold ph-whatsapp-logo"></i>
+            </a>
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="ph-bold ph-list"></i>
+            </button>
+        </div>
+
+        <div class="mobile-menu">
+            <nav>
+                <ul class="mobile-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <a href="https://wa.me/59170000000" class="btn-mobile-contact" target="_blank">
+                Contactar ahora <i class="ph-bold ph-whatsapp-logo"></i>
             </a>
         </div>
     </header>
@@ -49,35 +68,57 @@
         <section class="services-home">
             <div class="container">
                 <div class="section-header">
-                    <h2>Nuestras Líneas de Servicio</h2>
-                    <p>Soluciones integrales para cubrir todas las necesidades de tu negocio.</p>
+                    <h2>Nuestras Soluciones</h2>
+                    <p>Servicios especializados para cada etapa de tu negocio, desde el emprendimiento hasta la consolidación.</p>
                 </div>
 
                 <div class="services-grid">
                     <a href="servicios.html?id=1" class="service-card">
                         <div class="icon"><i class="ph-duotone ph-calculator"></i></div>
-                        <h3>Contabilidad</h3>
-                        <p>Gestión automatizada y sin papeles.</p>
+                        <h3>Contabilidad Mensual</h3>
+                        <p>Registro de ingresos, egresos y reportes para la toma de decisiones.</p>
                     </a>
+
                     <a href="servicios.html?id=2" class="service-card">
-                        <div class="icon"><i class="ph-duotone ph-chart-line-up"></i></div>
-                        <h3>Impuestos</h3>
-                        <p>Optimización fiscal inteligente.</p>
+                        <div class="icon"><i class="ph-duotone ph-files"></i></div>
+                        <h3>Estados Financieros</h3>
+                        <p>Elaboración de Balances y cierre de gestión para el SIN.</p>
                     </a>
-                    <a href="servicios.html?id=3" class="service-card">
-                        <div class="icon"><i class="ph-duotone ph-rocket-launch"></i></div>
-                        <h3>Startups</h3>
-                        <p>Constitución rápida de empresas.</p>
+
+                    <a href="servicios.html?id=6" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-file-text"></i></div>
+                        <h3>Impuestos (IVA/IT)</h3>
+                        <p>Declaración mensual de formularios 200, 400 y 608.</p>
                     </a>
-                    <a href="servicios.html?id=4" class="service-card">
-                        <div class="icon"><i class="ph-duotone ph-users-three"></i></div>
-                        <h3>Talento</h3>
-                        <p>Gestión moderna de nóminas.</p>
+
+                    <a href="servicios.html?id=7" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-chart-pie-slice"></i></div>
+                        <h3>Impuesto Utilidades</h3>
+                        <p>Determinación del IUE y análisis de gastos deducibles.</p>
                     </a>
-                    <a href="servicios.html?id=5" class="service-card">
-                        <div class="icon"><i class="ph-duotone ph-file-search"></i></div>
-                        <h3>Auditoría</h3>
-                        <p>Transparencia y control financiero.</p>
+
+                    <a href="servicios.html?id=10" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-identification-card"></i></div>
+                        <h3>Trámites NIT</h3>
+                        <p>Inscripción, actualizaciones y modificaciones en el Padrón.</p>
+                    </a>
+
+                    <a href="servicios.html?id=8" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-bank"></i></div>
+                        <h3>Bancarización</h3>
+                        <p>Envío Da Vinci para transacciones mayores a 50k Bs.</p>
+                    </a>
+
+                    <a href="servicios.html?id=9" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-handshake"></i></div>
+                        <h3>Deudas Tributarias</h3>
+                        <p>Gestión de planes de pago (FAP) y regularización.</p>
+                    </a>
+
+                    <a href="servicios.html?id=11" class="service-card">
+                        <div class="icon"><i class="ph-duotone ph-briefcase"></i></div>
+                        <h3>Consultores</h3>
+                        <p>Asesoría para profesionales independientes (Form 610).</p>
                     </a>
                 </div>
             </div>
@@ -85,65 +126,75 @@
 
         <section class="team-home">
             <div class="container">
-                <h2 class="section-title">Nuestro Equipo Profesional</h2>
-                <div class="team-grid">
-                    
-                    <div class="team-card">
-                        <div class="team-img"><img src="assets/img/elizabeth.jpg" alt="Lic. Elizabeth"></div>
-                        <div class="team-info">
-                            <h4>Lic. Elizabeth</h4>
-                            <span>DIRECTORA GENERAL</span>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="team-img"><img src="assets/img/carlos.jpg" alt="Lic. Carlos M."></div>
-                        <div class="team-info">
-                            <h4>Lic. Carlos M.</h4>
-                            <span>AUDITOR SENIOR</span>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="team-img"><img src="assets/img/ana.jpg" alt="Lic. Ana R."></div>
-                        <div class="team-info">
-                            <h4>Lic. Ana R.</h4>
-                            <span>ASESORA LEGAL</span>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="team-img"><img src="assets/img/consultor4.jpg" alt="Consultor"></div>
-                        <div class="team-info">
-                            <h4>Lic. Roberto S.</h4>
-                            <span>ESPECIALISTA TRIBUTARIO</span>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="team-img"><img src="assets/img/consultor5.jpg" alt="Consultor"></div>
-                        <div class="team-info">
-                            <h4>Ing. Sofia L.</h4>
-                            <span>ANALISTA DE DATOS</span>
-                        </div>
-                    </div>
-
+                
+                <div class="section-header">
+                    <h2>Respaldo Profesional</h2>
+                    <p>Un equipo multidisciplinario liderado por experiencia comprobada.</p>
                 </div>
+
+                <div class="team-group-showcase">
+                    <img src="assets/img/equipo-grupo.png" alt="Equipo YINEH Consultoría" class="img-group">
+                    
+                    <div class="group-overlay">
+                        <h3>Compromiso Colectivo</h3>
+                        <p>Nuestros contadores, auditores y abogados trabajan en sincronía para asegurar el cumplimiento tributario y la toma de decisiones correctas.</p>
+                        <a href="nosotros.html" class="btn-overlay">Conocer al equipo completo <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="leadership-feature-box">
+                    <div class="leader-content">
+                        <span class="badge-leader">DIRECTORA GENERAL</span>
+                        <h3>Lic. Elizabeth Ortiz</h3>
+                        <p class="leader-bio">
+                            "En YINEH no solo procesamos datos; interpretamos la normativa para blindar tu patrimonio. Mi compromiso es garantizar que cada decisión financiera que tomes esté respaldada por la legalidad y la estrategia correcta."
+                        </p>
+                        <div class="leader-signature">
+                            <p>Socia Fundadora</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-photo-wrapper">
+                        <img src="assets/img/elizabeth-vertical.png" alt="Lic. Elizabeth" class="img-leader">
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section class="blog-home">
+<section class="blog-home">
             <div class="container">
-                <h2 class="section-title">Últimos Blogs</h2>
+                <h2 class="section-title">Actualidad Tributaria</h2>
+                
                 <div class="blog-grid">
+                    
                     <div class="blog-card">
-                        <div class="blog-img-box"><img src="assets/img/blog1.jpg" alt="Noticia"></div>
+                        <div class="blog-img-box"><img src="assets/img/impuestos.png" alt="Vencimientos"></div>
                         <div class="blog-body">
                             <span class="cat">IMPUESTOS</span>
                             <h3>Vencimientos Enero: Lo que debes saber</h3>
-                            <a href="blog.html" class="link-more">Leer más</a>
+                            <a href="blog-detalle.html?id=1" class="link-more">Leer artículo</a>
                         </div>
                     </div>
+
+                    <div class="blog-card">
+                        <div class="blog-img-box"><img src="assets/img/Normativa.png" alt="Bancarización"></div>
+                        <div class="blog-body">
+                            <span class="cat">NORMATIVA</span>
+                            <h3>Bancarización y Módulo Da Vinci</h3>
+                            <a href="blog-detalle.html?id=2" class="link-more">Leer artículo</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-img-box"><img src="assets/img/Gestion.png" alt="Externalización"></div>
+                        <div class="blog-body">
+                            <span class="cat">GESTIÓN</span>
+                            <h3>Beneficios de externalizar Contabilidad</h3>
+                            <a href="blog-detalle.html?id=3" class="link-more">Leer artículo</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

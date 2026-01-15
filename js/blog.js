@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const post = blogPosts.find(p => p.id === postId);
 
         if (post) {
-            // Renderizar el artículo completo
+            // Renderizar el artículo completo + EL BOTÓN NUEVO AL FINAL
             readerContainer.innerHTML = `
                 <div class="article-header">
                     <span class="article-tag">${post.category}</span>
@@ -46,6 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${post.image}" alt="${post.title}" class="article-img-full">
                 <div class="article-body">
                     ${post.content}
+                </div>
+
+                <div class="article-footer">
+                    <a href="blog.html" class="btn-return">
+                        <i class="ph-bold ph-arrow-left"></i> Volver a Noticias
+                    </a>
                 </div>
             `;
         } else {

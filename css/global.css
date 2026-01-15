@@ -168,12 +168,6 @@ main { flex: 1; }
     color: #94a3b8;
 }
 
-@media (max-width: 900px) {
-    .nav-left { gap: 20px; }
-    .nav-links { display: none; } /* En móvil necesitaríamos menú hamburguesa, por ahora oculto */
-    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-}
-
 /* WhatsApp Flotante */
 .wa-float {
     position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white;
@@ -181,3 +175,100 @@ main { flex: 1; }
     font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 2000; transition: 0.3s;
 }
 .wa-float:hover { transform: scale(1.1); }
+
+
+/* =========================================
+   ESTILOS RESPONSIVE & MENÚ MÓVIL (AGREGADO)
+   ========================================= */
+
+/* Estilos del Botón Hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto en PC */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white); /* Color por defecto (tema oscuro) */
+    transition: 0.3s;
+}
+
+/* Ajuste de color para Tema Claro (Nosotros/Servicios) */
+body.theme-light .menu-toggle { color: var(--text-dark); }
+
+/* Contenedor del Menú Desplegable */
+.mobile-menu {
+    position: fixed;
+    top: 80px; /* Altura del header */
+    left: 0;
+    width: 100%;
+    height: 0; /* Cerrado por defecto */
+    background: rgba(2, 6, 23, 0.98); /* Fondo oscuro casi sólido */
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Animación suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Clase para abrir el menú (se activa con JS) */
+.mobile-menu.active {
+    height: calc(100vh - 80px); /* Ocupa el resto de la pantalla */
+}
+
+/* Enlaces del Menú Móvil */
+.mobile-links {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mobile-links li { margin: 25px 0; opacity: 0; transform: translateY(20px); transition: 0.4s; }
+.mobile-menu.active .mobile-links li { opacity: 1; transform: translateY(0); } /* Efecto cascada simple */
+
+.mobile-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.8rem; /* Letra grande para tocar fácil */
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.mobile-links a:hover { color: var(--accent-cyan); }
+
+/* Botón Contacto Móvil */
+.btn-mobile-contact {
+    background: var(--accent-cyan);
+    color: #020617;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: flex; align-items: center; gap: 10px;
+    opacity: 0; transition: 0.5s;
+}
+.mobile-menu.active .btn-mobile-contact { opacity: 1; }
+
+/* --- MEDIA QUERIES (Puntos de quiebre para Celulares/Tablets) --- */
+@media (max-width: 900px) {
+    /* Ocultar elementos de escritorio */
+    .nav-links { display: none; }
+    .desktop-only { display: none; }
+    
+    /* Mostrar hamburguesa */
+    .menu-toggle { display: block; }
+    
+    /* Ajustes generales móviles */
+    .nav-left { gap: 15px; }
+    .logo img { height: 40px; } /* Logo un poco más pequeño */
+    header { padding: 0 10px; }
+    
+    /* Footer a 1 columna */
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .footer-col p { margin: 0 auto 15px; }
+    .social-row { justify-content: center; }
+}
