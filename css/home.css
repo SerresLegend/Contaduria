@@ -35,14 +35,58 @@
     padding: 40px 30px;
     text-decoration: none;
     transition: 0.3s ease;
-    display: block;
+    display: flex;             /* Cambiado a flex para controlar dirección */
+    flex-direction: column;    /* Default: Vertical (Icono arriba) */
+    align-items: flex-start;
+    height: 100%;
 }
+
 .service-card:hover { transform: translateY(-8px); border-color: var(--accent-cyan); background: rgba(30, 41, 59, 0.8); }
-.service-card .icon { font-size: 3rem; color: var(--accent-cyan); margin-bottom: 20px; display: inline-block; }
+
+.service-card .icon { 
+    font-size: 3rem; 
+    color: var(--accent-cyan); 
+    margin-bottom: 20px; 
+    display: inline-block; 
+}
+
 .service-card h3 { color: var(--white); font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; }
 .service-card p { color: var(--text-dim); font-size: 0.95rem; line-height: 1.5; }
 
-/* --- NUEVA SECCIÓN EQUIPO + LIDERAZGO --- */
+/* --- MODIFICACIÓN RESPONSIVE COMPACTA PARA SERVICIOS --- */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 15px; /* Menos espacio entre items */
+    }
+
+    .service-card {
+        flex-direction: row; /* Horizontal: Icono izq, Texto der */
+        align-items: center;
+        padding: 20px; /* Menos padding */
+        gap: 20px;
+    }
+
+    .service-card .icon {
+        font-size: 2rem; /* Icono más pequeño */
+        margin-bottom: 0; /* Sin margen inferior porque está al lado */
+        flex-shrink: 0; /* Que no se aplaste */
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem; /* Título más pequeño */
+        margin-bottom: 4px;
+    }
+
+    .service-card p {
+        font-size: 0.85rem; /* Texto más compacto */
+        line-height: 1.4;
+        margin: 0;
+    }
+}
+
+
+/* --- SECCIÓN EQUIPO + LIDERAZGO --- */
 .team-home {
     padding: 80px 0 120px;
 }
@@ -161,6 +205,7 @@
     .leader-photo-wrapper { width: 100%; height: 450px; }
     .img-leader { box-shadow: none; }
     .section-header h2 { font-size: 2rem; }
+    .hero h1 { font-size: 2.5rem; }
 }
 
 /* --- BLOG --- */
@@ -205,6 +250,5 @@
 }
 
 @media (max-width: 768px) {
-    .services-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 2.5rem; }
+    /* La regla de servicios compacta ya está arriba */
 }

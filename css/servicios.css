@@ -48,7 +48,7 @@
     box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
 }
 
-/* VISTA PREVIA */
+/* VISTA PREVIA (Estado Normal) */
 .square-preview { padding: 20px; }
 .service-icon-lg { font-size: 3.5rem; color: var(--accent-cyan); margin-bottom: 15px; display: block; }
 .square-preview h3 { color: var(--text-dark); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
@@ -91,7 +91,53 @@
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+
+/* --- MODIFICACIÓN RESPONSIVE COMPACTA (SERVICIOS) --- */
 @media (max-width: 768px) {
-    .services-expand-grid { grid-template-columns: 1fr; }
+    .services-expand-grid { 
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+    
     .service-square-item.expanded { padding: 20px; }
+    
+    /* Transformación a Barra Horizontal en Móvil
+       (Solo se aplica cuando NO está expandido)
+    */
+    .service-square-item:not(.expanded) {
+        aspect-ratio: auto;     /* Quita la forma cuadrada forzada */
+        min-height: auto;       /* Altura automática */
+        flex-direction: row;    /* Elementos lado a lado (Izquierda -> Derecha) */
+        align-items: center;    /* Centrado verticalmente */
+        padding: 15px 20px;
+        text-align: left;       /* Texto a la izquierda */
+    }
+
+    /* Ajustar el contenedor interno de la vista previa */
+    .service-square-item:not(.expanded) .square-preview {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        gap: 20px; /* Espacio entre icono y texto */
+    }
+
+    /* Reducir tamaño del icono y quitar margen inferior */
+    .service-square-item:not(.expanded) .service-icon-lg {
+        font-size: 2rem; 
+        margin-bottom: 0;
+    }
+
+    /* Ajustar título */
+    .service-square-item:not(.expanded) h3 {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        flex: 1; /* Ocupa el espacio restante */
+    }
+
+    /* Ajustar el texto "Ver más" */
+    .service-square-item:not(.expanded) .tap-hint {
+        font-size: 0.7rem;
+        white-space: nowrap; /* Que no se rompa la línea */
+    }
 }
