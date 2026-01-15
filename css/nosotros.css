@@ -70,7 +70,7 @@
     font-weight: 700;
 }
 
-/* SECCIÓN EQUIPO */
+/* SECCIÓN EQUIPO (NUEVA VERSIÓN SINGLE) */
 .team-section { 
     background: #f8fafc; 
     padding: 100px 0; 
@@ -78,57 +78,120 @@
     border-top: 1px solid #e2e8f0; 
 }
 
-.team-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 40px; 
-    justify-content: center;
+/* Caja de Liderazgo (Tema Claro) */
+.leadership-box-light {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 50px;
+    /* Sombra suave para resaltar sobre fondo gris */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
 }
 
-.team-card { 
-    text-align: center; 
-    background: white;
-    padding: 20px;
-    border-radius: 16px;
-    border: 1px solid #f1f5f9;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-    transition: 0.3s;
+/* Columna Texto */
+.leader-info {
+    flex: 1;
 }
 
-.team-card:hover {
+.leader-badge {
+    color: var(--accent-cyan);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.leader-info h3 {
+    font-size: 2.8rem;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.leader-desc {
+    color: #475569;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-style: italic;
+    border-left: 4px solid var(--accent-cyan);
+    padding-left: 25px;
+}
+
+/* Detalles extra (Certificaciones) */
+.leader-details {
+    display: flex;
+    gap: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.detail-item i {
+    color: var(--accent-cyan);
+    font-size: 1.5rem;
+}
+
+/* Columna Foto */
+.leader-img-container {
+    flex: 0 0 350px;
+    height: 500px;
+    position: relative;
+}
+
+.leader-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    /* Sombra más suave para tema claro */
+    box-shadow: 20px 20px 0 #e2e8f0; 
+    transition: 0.4s ease;
+}
+
+.leadership-box-light:hover .leader-portrait {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-    border-color: var(--accent-cyan);
-}
-
-.team-photo { 
-    width: 100%; 
-    height: 300px; 
-    object-fit: cover; 
-    border-radius: 12px; 
-    margin-bottom: 20px; 
-    filter: grayscale(100%); 
-    transition: 0.3s; 
-}
-
-.team-card:hover .team-photo { filter: grayscale(0%); }
-
-.team-card h3 { 
-    font-size: 1.3rem; 
-    color: var(--text-dark); 
-    margin-bottom: 5px;
-}
-
-.team-card span { 
-    color: var(--accent-cyan); 
-    font-weight: 700; 
-    font-size: 0.85rem; 
-    text-transform: uppercase; 
-    letter-spacing: 1px;
+    box-shadow: 20px 25px 0 #cbd5e1;
 }
 
 /* RESPONSIVE */
-@media(max-width: 768px) { 
+@media(max-width: 900px) { 
     .about-grid { grid-template-columns: 1fr; } 
     .about-hero h1 { font-size: 2.5rem; }
+    
+    /* Responsive Liderazgo */
+    .leadership-box-light {
+        flex-direction: column-reverse; /* Foto arriba, texto abajo en móvil */
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .leader-desc {
+        border-left: none;
+        padding-left: 0;
+    }
+    
+    .leader-details {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .leader-img-container {
+        width: 100%;
+        height: 400px;
+        flex: auto;
+    }
+    
+    .leader-portrait {
+        box-shadow: none; /* Quitamos el efecto de sombra dura en móvil para ahorrar espacio */
+    }
 }
