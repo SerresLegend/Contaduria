@@ -168,13 +168,35 @@ main { flex: 1; }
     color: #94a3b8;
 }
 
-/* WhatsApp Flotante */
+/* --- BOTÓN FLOTANTE DE WHATSAPP (REALISTA) --- */
 .wa-float {
-    position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white;
-    width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 2000; transition: 0.3s;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background: none; /* Quitamos el fondo verde plano */
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none; /* Quitamos la sombra CSS por defecto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
-.wa-float:hover { transform: scale(1.1); }
+
+/* Estilos para la imagen realista */
+.wa-float img {
+    width: 65px; /* Tamaño del logo */
+    height: 65px;
+    display: block;
+    /* Sombra realista para que flote de verdad */
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Efecto al pasar el mouse */
+.wa-float:hover {
+    transform: scale(1.1) rotate(-5deg); /* Un pequeño efecto de "saludo" */
+}
 
 
 /* =========================================

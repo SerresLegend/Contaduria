@@ -3,69 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Noticias | YINEH Consultoría</title>
+    <title>Detalle del Curso | YINEH Consultoría</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/curso-detalle.css">
 </head>
 <body class="theme-light">
 
-     <header>
+    <header>
         <div class="nav-container">
             <div class="nav-left">
                 <a href="index.html" class="logo">
                     <img src="assets/logo.png" alt="YINEH">
                 </a>
-                
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="index.html">Servicios</a></li>
-                        <li><a href="cursos.html">Cursos</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="blog.html" class="active">Blog</a></li>
-                    </ul>
-                </nav>
             </div>
-
-            <a href="https://wa.me/59171600722" class="btn-header desktop-only" target="_blank">
-                Contactar <i class="ph-bold ph-whatsapp-logo"></i>
-            </a>
-
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <i class="ph-bold ph-list"></i>
-            </button>
-        </div>
-
-        <div class="mobile-menu">
-            <nav>
-                <ul class="mobile-links">
-                    <li><a href="index.html">Servicios</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </nav>
-            
-            <a href="https://wa.me/59171600722" class="btn-mobile-contact" target="_blank">
-                Contactar ahora <i class="ph-bold ph-whatsapp-logo"></i>
+            <a href="cursos.html" class="btn-header" style="color:var(--text-dark); border-color:#cbd5e1;">
+                <i class="ph-bold ph-arrow-left"></i> Volver a Cursos
             </a>
         </div>
     </header>
 
     <main>
-        <div class="blog-hero">
-            <div class="container">
-                <span class="badge" style="color:var(--text-dark); border-color:#cbd5e1;">ACTUALIDAD Y NORMATIVA</span>
-                <h1>Noticias Contables</h1>
-                <p>Mantente informado sobre las últimas regulaciones del SIN y consejos financieros.</p>
-            </div>
-        </div>
-
         <div class="container">
-            <div id="blog-grid-container" class="blog-grid-full">
-                </div>
+            <section class="curso-detalle-section" id="curso-detalle-container">
+                </section>
         </div>
     </main>
 
@@ -110,9 +73,8 @@
 <a href="https://wa.me/59171600722" class="wa-float" target="_blank">
     <img src="assets/img/WhatsApp-logo.png" alt="Contactar por WhatsApp">
 </a>
-
     <script src="js/main.js"></script>
-    <script src="js/blog-data.js"></script>
-    <script src="js/blog.js"></script>
+    <script src="js/cursos-data.js"></script>
+    <script src="js/cursos.js"></script>
 </body>
 </html>

@@ -1,0 +1,144 @@
+/* --- DETALLE DEL CURSO (TEMA CLARO) --- */
+.curso-detalle-section { padding: 140px 0 100px; }
+
+.curso-header { 
+    margin-bottom: 40px; 
+    border-bottom: 1px solid #e2e8f0; 
+    padding-bottom: 30px; 
+    text-align: center; 
+}
+
+.curso-header h1 { 
+    font-size: 3rem; 
+    color: var(--text-dark); 
+    margin-bottom: 10px; 
+    line-height: 1.1; 
+}
+
+/* El contenedor principal es una columna vertical */
+.curso-body-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+/* Imagen Principal */
+.curso-main-img { 
+    width: 100%; 
+    height: 450px; 
+    object-fit: cover; 
+    border-radius: 24px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Descripción */
+.curso-description h3 { 
+    color: var(--text-dark); 
+    margin: 40px 0 20px; 
+    font-size: 1.8rem; 
+}
+.curso-description p { 
+    margin-bottom: 15px; 
+    line-height: 1.8; 
+    color: #475569; 
+    font-size: 1.1rem;
+}
+.curso-description ul { 
+    padding-left: 20px; 
+    color: #475569; 
+    margin-bottom: 20px; 
+}
+.curso-description li { 
+    margin-bottom: 10px; 
+    font-size: 1.1rem;
+}
+
+/* --- CAJA DE PRECIO Y QR (CENTRADA ABAJO) --- */
+.sidebar-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.price-box {
+    background: white; 
+    border: 2px solid #f1f5f9; 
+    padding: 50px; 
+    border-radius: 30px;
+    box-shadow: 0 20px 50px -10px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px; 
+    width: 100%;
+}
+
+.price-box .label { 
+    display: block; 
+    color: #64748b; 
+    margin-bottom: 10px; 
+    font-size: 1rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-weight: 700;
+}
+
+.price-box .amount { 
+    display: block; 
+    font-size: 3.5rem; 
+    font-weight: 800; 
+    color: var(--text-dark); 
+    margin-bottom: 30px; 
+}
+
+/* Estilos del QR */
+.qr-container {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px dashed #cbd5e1;
+    margin-bottom: 30px;
+    display: inline-block; 
+}
+
+.qr-label { font-size: 0.9rem; color: #64748b; margin-bottom: 15px; font-weight: 600; }
+
+.qr-img {
+    width: 200px; 
+    height: 200px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    display: block; 
+    margin: 0 auto;
+}
+
+/* Botón Confirmar Pago */
+.btn-inscripcion {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    background: #25D366; color: white;
+    padding: 18px 40px; border-radius: 50px;
+    text-decoration: none; font-weight: 800;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+.btn-inscripcion:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4); 
+    background: #20bd5a; 
+}
+
+.secure-text { 
+    margin-top: 20px; 
+    font-size: 0.9rem; 
+    color: #94a3b8; 
+    display: flex; align-items: center; justify-content: center; gap: 6px; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .curso-main-img { height: 250px; }
+    .price-box { padding: 30px; }
+    .price-box .amount { font-size: 2.5rem; }
+}
