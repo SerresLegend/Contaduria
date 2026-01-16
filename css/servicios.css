@@ -19,11 +19,11 @@
     letter-spacing: 1px;
 }
 
-/* GRILLA */
+/* GRILLA (FORZADA A 2 COLUMNAS) */
 .services-expand-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
 }
 
 /* ÍTEM CUADRADO (ESTILO OSCURO) */
@@ -34,7 +34,7 @@
     cursor: pointer;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    aspect-ratio: 1 / 1; 
+    min-height: 250px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,16 +50,16 @@
 }
 
 /* VISTA PREVIA */
-.square-preview { padding: 20px; }
-.service-icon-lg { font-size: 3.5rem; color: var(--accent-cyan); margin-bottom: 15px; display: block; }
-.square-preview h3 { color: var(--white); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; } 
-.tap-hint { font-size: 0.8rem; color: var(--text-dim); font-weight: 700; text-transform: uppercase; }
+.square-preview { padding: 40px; } 
+.service-icon-lg { font-size: 4rem; color: var(--accent-cyan); margin-bottom: 20px; display: block; }
+.square-preview h3 { color: var(--white); font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; } 
+.tap-hint { font-size: 0.9rem; color: var(--text-dim); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
-/* CONTENIDO EXPANDIDO (ESTRUCTURA NUEVA) */
+/* CONTENIDO EXPANDIDO */
 .square-content { display: none; opacity: 0; }
 
 .service-square-item.expanded {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; 
     aspect-ratio: auto;
     display: block; 
     text-align: left;
@@ -77,107 +77,104 @@
     display: block;
     opacity: 1;
     animation: fadeIn 0.5s ease forwards;
-    padding: 40px;
+    padding: 50px;
 }
 
-/* Layout Interno: Texto + Imagen */
+/* Layout Interno */
 .service-expanded-wrapper {
     display: flex;
-    gap: 40px;
-    align-items: center;
+    gap: 50px;
+    align-items: flex-start; 
 }
 
 .service-text { flex: 1; }
-.service-image { flex: 0 0 350px; } /* Ancho fijo para la imagen */
+.service-image { flex: 0 0 400px; } 
 
 .service-image img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-.content-text h3, .service-text h3 { font-size: 1.8rem; color: var(--white); margin-bottom: 15px; } 
-.content-text p, .service-text p { color: #cbd5e1; margin-bottom: 25px; line-height: 1.6; } 
+.content-text h3, .service-text h3 { font-size: 2rem; color: var(--white); margin-bottom: 20px; } 
+.content-text p, .service-text p { color: #cbd5e1; margin-bottom: 25px; line-height: 1.7; font-size: 1.1rem; } 
 
 .feature-list { list-style: none; padding: 0; margin-bottom: 30px; }
 .feature-list li {
-    padding-left: 25px; position: relative; color: #94a3b8; margin-bottom: 8px; font-weight: 500;
+    padding-left: 30px; position: relative; color: #cbd5e1; margin-bottom: 12px; font-weight: 500; font-size: 1rem;
 }
 .feature-list li::before {
-    content: "✓"; color: var(--accent-cyan); font-weight: 900; position: absolute; left: 0;
+    content: "✓"; color: var(--accent-cyan); font-weight: 900; position: absolute; left: 0; font-size: 1.2rem;
 }
 
-/* BOTÓN CTA (NUEVO) */
+/* --- BOTONES DE ACCIÓN (NUEVO) --- */
+.service-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap; /* Para que se acomoden en móvil */
+}
+
+/* Botón Principal (Cotizar) */
 .btn-service-cta {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     background: var(--accent-cyan);
-    color: #020617; /* Texto oscuro para contraste */
-    padding: 12px 30px;
+    color: #020617; 
+    padding: 14px 35px;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
     transition: 0.3s;
+    font-size: 1.1rem;
 }
 .btn-service-cta:hover {
     background: white;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
     transform: translateY(-2px);
+}
+
+/* Botón Minimizar (Secundario) */
+.btn-minimize {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--text-dim);
+    padding: 14px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    font-family: inherit; /* Heredar fuente Inter */
+}
+.btn-minimize:hover {
+    border-color: var(--white);
+    color: var(--white);
+    background: rgba(255,255,255,0.05);
 }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-    /* En tablet/móvil, la imagen pasa arriba */
+    .services-expand-grid { grid-template-columns: 1fr; }
+    
     .service-expanded-wrapper {
-        flex-direction: column-reverse; /* Texto abajo, imagen arriba */
+        flex-direction: column-reverse; 
         gap: 30px;
     }
     .service-image { flex: auto; width: 100%; }
     .service-image img { height: 200px; }
-    .btn-service-cta { width: 100%; justify-content: center; }
-}
-
-@media (max-width: 768px) {
-    .services-expand-grid { grid-template-columns: 1fr; }
-    .service-square-item.expanded { padding: 20px; }
     
-    /* Transformación Compacta Móvil (Adaptada a Oscuro) */
-    .service-square-item:not(.expanded) {
-        aspect-ratio: auto;
-        min-height: auto;
-        flex-direction: row;
-        align-items: center;
-        padding: 15px 20px;
-        text-align: left;
-    }
+    /* Botones ancho completo en móvil */
+    .btn-service-cta, .btn-minimize { width: 100%; justify-content: center; }
     
-    .service-square-item:not(.expanded) .square-preview {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        padding: 0;
-        gap: 20px;
-    }
-
-    .service-square-item:not(.expanded) .service-icon-lg {
-        font-size: 2rem; 
-        margin-bottom: 0;
-    }
-
-    .service-square-item:not(.expanded) h3 {
-        margin-bottom: 0;
-        font-size: 1.1rem;
-        flex: 1;
-    }
-
-    .service-square-item:not(.expanded) .tap-hint {
-        font-size: 0.7rem;
-        white-space: nowrap;
-    }
+    .service-square-item.expanded .square-content { padding: 30px; }
 }

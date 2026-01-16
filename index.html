@@ -17,7 +17,9 @@
             <div class="nav-left">
                 <a href="index.html" class="logo">
                     <img src="assets/logo.png" alt="YINEH">
+                    <span>CONSULTORÍA</span>
                 </a>
+                
                 <nav>
                     <ul class="nav-links">
                         <li><a href="index.html" class="active">Servicios</a></li>
@@ -27,11 +29,16 @@
                     </ul>
                 </nav>
             </div>
+
             <a href="https://wa.me/59171600722" class="btn-header desktop-only" target="_blank">
-                Contactar con Yireh<i class="ph-bold ph-whatsapp-logo"></i>
+                Contactar <i class="ph-bold ph-whatsapp-logo"></i>
             </a>
-            <button class="menu-toggle"><i class="ph-bold ph-list"></i></button>
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="ph-bold ph-list"></i>
+            </button>
         </div>
+
         <div class="mobile-menu">
             <nav>
                 <ul class="mobile-links">
@@ -41,44 +48,58 @@
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
-            <a href="https://wa.me/59171600722" class="btn-mobile-contact" target="_blank">Contactar ahora</a>
+            
+            <a href="https://wa.me/59171600722" class="btn-mobile-contact" target="_blank">
+                Contactar ahora <i class="ph-bold ph-whatsapp-logo"></i>
+            </a>
         </div>
     </header>
 
     <main>
         <div class="container">
             <div class="page-title">
-                <h1>Catálogo Completo</h1>
-                <p>Selecciona un servicio para ver el detalle técnico y alcance.</p>
+                <h1>Nuestras Soluciones</h1>
+                <p>Servicios especializados para cada etapa de tu negocio, desde el emprendimiento hasta la consolidación.</p>
             </div>
             
             <div class="services-container-wrapper">
 
-                <h2 class="group-title">Servicios Contables</h2>
+                <h2 class="group-title">Áreas de Especialización</h2>
+                
                 <div class="services-expand-grid">
                     
                     <div class="service-square-item" id="ser-1" onclick="toggleSquare(this)">
                         <div class="square-preview">
-                            <i class="ph-duotone ph-calculator service-icon-lg"></i>
-                            <h3>Contabilidad Mensual</h3>
-                            <span class="tap-hint">Ver más +</span>
+                            <i class="ph-duotone ph-buildings service-icon-lg"></i>
+                            <h3>Constitución de Empresas</h3>
+                            <span class="tap-hint">Ver detalle +</span>
                         </div>
                         <div class="square-content">
                             <div class="service-expanded-wrapper">
                                 <div class="service-text">
-                                    <h3>Procesamiento Contable</h3>
-                                    <p>Registro sistemático y cronológico de todas las transacciones económicas de la empresa.</p>
+                                    <h3>Constitución y Formalización</h3>
+                                    <p>Nos encargamos de todo el proceso legal y administrativo para que inicies tu negocio correctamente ante las entidades competentes.</p>
                                     <ul class="feature-list">
-                                        <li>Registro de ingresos, egresos y diarios.</li>
-                                        <li>Clasificación de cuentas según normas contables.</li>
-                                        <li>Generación de reportes mensuales.</li>
+                                        <li>Constitución de empresas unipersonales.</li>
+                                        <li>Constitución de sociedades (SRL, SA u otras).</li>
+                                        <li>Trámite de NIT.</li>
+                                        <li>Registro en Fundempresa / SEPREC.</li>
+                                        <li>Licencia de funcionamiento.</li>
+                                        <li>Orientación inicial tributaria y laboral.</li>
                                     </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20quisiera%20cotizar%20el%20servicio%20de%20Contabilidad%20Mensual" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
+                                    
+                                    <div class="service-actions">
+                                        <a href="https://wa.me/59171600722?text=Hola,%20quisiera%20informacion%20sobre%20Constitucion%20de%20Empresas" class="btn-service-cta" target="_blank">
+                                            Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
+                                        </a>
+                                        <button class="btn-minimize" onclick="minimizeSquare(event, this)">
+                                            Minimizar <i class="ph-bold ph-caret-up"></i>
+                                        </button>
+                                    </div>
+
                                 </div>
                                 <div class="service-image">
-                                    <img src="assets/img/contabilidad.jpg" alt="Contabilidad Mensual" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
+                                    <img src="assets/img/constitucion.jpg" alt="Constitución de Empresas" onerror="this.src='https://via.placeholder.com/400x300?text=Constitucion+Empresas'">
                                 </div>
                             </div>
                         </div>
@@ -86,26 +107,35 @@
 
                     <div class="service-square-item" id="ser-2" onclick="toggleSquare(this)">
                         <div class="square-preview">
-                            <i class="ph-duotone ph-files service-icon-lg"></i>
-                            <h3>Estados Financieros</h3>
-                            <span class="tap-hint">Ver más +</span>
+                            <i class="ph-duotone ph-calculator service-icon-lg"></i>
+                            <h3>Servicios Contables</h3>
+                            <span class="tap-hint">Ver detalle +</span>
                         </div>
                         <div class="square-content">
                             <div class="service-expanded-wrapper">
                                 <div class="service-text">
-                                    <h3>Cierre de Gestión</h3>
-                                    <p>Elaboración de los Estados Financieros anuales obligatorios para el SIN y Fundempresa.</p>
+                                    <h3>Contabilidad Integral</h3>
+                                    <p>Mantenemos tu contabilidad al día, ya sea mensual o anual, asegurando información financiera precisa para la toma de decisiones.</p>
                                     <ul class="feature-list">
-                                        <li>Balance General y Estado de Resultados.</li>
-                                        <li>Estado de Flujo de Efectivo.</li>
-                                        <li>Notas a los Estados Financieros.</li>
+                                        <li>Contabilidad mensual o anual.</li>
+                                        <li>Registro de ingresos, egresos y costos.</li>
+                                        <li>Elaboración de Estados Financieros.</li>
+                                        <li>Balances de apertura y cierre.</li>
+                                        <li>Análisis financiero.</li>
                                     </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20quisiera%20cotizar%20Estados%20Financieros" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
+                                    
+                                    <div class="service-actions">
+                                        <a href="https://wa.me/59171600722?text=Hola,%20necesito%20Servicios%20Contables" class="btn-service-cta" target="_blank">
+                                            Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
+                                        </a>
+                                        <button class="btn-minimize" onclick="minimizeSquare(event, this)">
+                                            Minimizar <i class="ph-bold ph-caret-up"></i>
+                                        </button>
+                                    </div>
+
                                 </div>
                                 <div class="service-image">
-                                    <img src="assets/img/estados-financieros.jpg" alt="Estados Financieros" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
+                                    <img src="assets/img/contabilidad.jpg" alt="Servicios Contables" onerror="this.src='https://via.placeholder.com/400x300?text=Servicios+Contables'">
                                 </div>
                             </div>
                         </div>
@@ -113,26 +143,37 @@
 
                     <div class="service-square-item" id="ser-3" onclick="toggleSquare(this)">
                         <div class="square-preview">
-                            <i class="ph-duotone ph-book-bookmark service-icon-lg"></i>
-                            <h3>Registro RCV</h3>
-                            <span class="tap-hint">Ver más +</span>
+                            <i class="ph-duotone ph-file-text service-icon-lg"></i>
+                            <h3>Declaración Impositiva</h3>
+                            <span class="tap-hint">Ver detalle +</span>
                         </div>
                         <div class="square-content">
                             <div class="service-expanded-wrapper">
                                 <div class="service-text">
-                                    <h3>Registro de Compras y Ventas</h3>
-                                    <p>Gestión y envío del Registro de Compras y Ventas (RCV) a través del sistema SIAT en línea.</p>
+                                    <h3>Gestión Tributaria Mensual</h3>
+                                    <p>Nos ocupamos de la gestión integral de tus obligaciones fiscales para asegurar el cumplimiento oportuno ante Impuestos Nacionales.</p>
                                     <ul class="feature-list">
-                                        <li>Validación de facturas.</li>
-                                        <li>Consolidación mensual.</li>
-                                        <li>Envío en plazos establecidos.</li>
+                                        <li>Registro de ventas y compras.</li>
+                                        <li>Verificación de facturación.</li>
+                                        <li>Declaraciones impositivas mensuales.</li>
+                                        <li>Cumplimiento ante Impuestos Nacionales.</li>
+                                        <li>Bancarización y Facilidades de pago.</li>
+                                        <li>Actualización de actividad económica.</li>
+                                        <li>Solicitudes de dosificación.</li>
                                     </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20quisiera%20informacion%20sobre%20RCV" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
+                                    
+                                    <div class="service-actions">
+                                        <a href="https://wa.me/59171600722?text=Hola,%20necesito%20ayuda%20con%20mis%20Declaraciones%20Mensuales" class="btn-service-cta" target="_blank">
+                                            Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
+                                        </a>
+                                        <button class="btn-minimize" onclick="minimizeSquare(event, this)">
+                                            Minimizar <i class="ph-bold ph-caret-up"></i>
+                                        </button>
+                                    </div>
+
                                 </div>
                                 <div class="service-image">
-                                    <img src="assets/img/rcv.jpg" alt="RCV" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
+                                    <img src="assets/img/impuestos.jpg" alt="Declaración Impositiva" onerror="this.src='https://via.placeholder.com/400x300?text=Declaracion+Impositiva'">
                                 </div>
                             </div>
                         </div>
@@ -140,230 +181,40 @@
 
                     <div class="service-square-item" id="ser-4" onclick="toggleSquare(this)">
                         <div class="square-preview">
-                            <i class="ph-duotone ph-arrows-left-right service-icon-lg"></i>
-                            <h3>Conciliaciones</h3>
-                            <span class="tap-hint">Ver más +</span>
+                            <i class="ph-duotone ph-users-three service-icon-lg"></i>
+                            <h3>Servicios Laborales</h3>
+                            <span class="tap-hint">Ver detalle +</span>
                         </div>
                         <div class="square-content">
                             <div class="service-expanded-wrapper">
                                 <div class="service-text">
-                                    <h3>Análisis de Cuentas</h3>
-                                    <p>Control cruzado entre los registros contables y los movimientos bancarios reales.</p>
+                                    <h3>Gestión de Personal</h3>
+                                    <p>Administración correcta de tu planilla y cumplimiento con las entidades laborales y de seguridad social.</p>
                                     <ul class="feature-list">
-                                        <li>Detección de diferencias.</li>
-                                        <li>Depuración de cuentas por cobrar/pagar.</li>
-                                        <li>Control de flujo de caja.</li>
+                                        <li>Inscripción a la Caja Nacional de Salud.</li>
+                                        <li>Inscripción al Ministerio de Trabajo.</li>
+                                        <li>Elaboración y presentación de planillas.</li>
+                                        <li>Declaraciones ante la Gestora Pública.</li>
                                     </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20necesito%20conciliaciones%20bancarias" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
+                                    
+                                    <div class="service-actions">
+                                        <a href="https://wa.me/59171600722?text=Hola,%20necesito%20Servicios%20Laborales" class="btn-service-cta" target="_blank">
+                                            Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
+                                        </a>
+                                        <button class="btn-minimize" onclick="minimizeSquare(event, this)">
+                                            Minimizar <i class="ph-bold ph-caret-up"></i>
+                                        </button>
+                                    </div>
+
                                 </div>
                                 <div class="service-image">
-                                    <img src="assets/img/conciliaciones.jpg" alt="Conciliaciones" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
+                                    <img src="assets/img/laboral.jpg" alt="Servicios Laborales" onerror="this.src='https://via.placeholder.com/400x300?text=Servicios+Laborales'">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="service-square-item" id="ser-5" onclick="toggleSquare(this)">
-                        <div class="square-preview">
-                            <i class="ph-duotone ph-clock-counter-clockwise service-icon-lg"></i>
-                            <h3>Actualización</h3>
-                            <span class="tap-hint">Ver más +</span>
-                        </div>
-                        <div class="square-content">
-                            <div class="service-expanded-wrapper">
-                                <div class="service-text">
-                                    <h3>Regularización</h3>
-                                    <p>Puesta al día de contabilidades atrasadas o mal gestionadas en periodos anteriores.</p>
-                                    <ul class="feature-list">
-                                        <li>Reconstrucción de registros.</li>
-                                        <li>Corrección de errores contables.</li>
-                                        <li>Impresión y foliado de libros.</li>
-                                    </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20necesito%20actualizar%20mi%20contabilidad" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
-                                </div>
-                                <div class="service-image">
-                                    <img src="assets/img/actualizacion.jpg" alt="Actualización" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="group-title">Tributario Empresas</h2>
-                <div class="services-expand-grid">
-                    
-                    <div class="service-square-item" id="ser-6" onclick="toggleSquare(this)">
-                        <div class="square-preview">
-                            <i class="ph-duotone ph-file-text service-icon-lg"></i>
-                            <h3>DD.JJ. Mensuales</h3>
-                            <span class="tap-hint">Ver más +</span>
-                        </div>
-                        <div class="square-content">
-                            <div class="service-expanded-wrapper">
-                                <div class="service-text">
-                                    <h3>Impuestos Mensuales</h3>
-                                    <p>Declaración y pago de impuestos recurrentes según terminación de NIT.</p>
-                                    <ul class="feature-list">
-                                        <li>Formulario 200 (IVA).</li>
-                                        <li>Formulario 400 (IT).</li>
-                                        <li>Formulario 608 (RC-IVA Dependientes).</li>
-                                    </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20necesito%20ayuda%20con%20mis%20impuestos%20mensuales" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
-                                </div>
-                                <div class="service-image">
-                                    <img src="assets/img/impuestos.jpg" alt="Impuestos" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-square-item" id="ser-7" onclick="toggleSquare(this)">
-                        <div class="square-preview">
-                            <i class="ph-duotone ph-chart-pie-slice service-icon-lg"></i>
-                            <h3>Impuesto Utilidades</h3>
-                            <span class="tap-hint">Ver más +</span>
-                        </div>
-                        <div class="square-content">
-                            <div class="service-expanded-wrapper">
-                                <div class="service-text">
-                                    <h3>IUE Anual</h3>
-                                    <p>Determinación y declaración del Impuesto sobre las Utilidades de las Empresas.</p>
-                                    <ul class="feature-list">
-                                        <li>Llenado del Formulario 500.</li>
-                                        <li>Análisis de gastos deducibles.</li>
-                                        <li>Compensación con el IT.</li>
-                                    </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20necesito%20ayuda%20con%20el%20IUE" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
-                                </div>
-                                <div class="service-image">
-                                    <img src="assets/img/iue.jpg" alt="IUE" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-square-item" id="ser-8" onclick="toggleSquare(this)">
-                        <div class="square-preview">
-                            <i class="ph-duotone ph-bank service-icon-lg"></i>
-                            <h3>Bancarización</h3>
-                            <span class="tap-hint">Ver más +</span>
-                        </div>
-                        <div class="square-content">
-                            <div class="service-expanded-wrapper">
-                                <div class="service-text">
-                                    <h3>Registro Auxiliar (Da Vinci)</h3>
-                                    <p>Envío de información de transacciones iguales o mayores a 50.000 Bs.</p>
-                                    <ul class="feature-list">
-                                        <li>Registro de compras/ventas bancarizadas.</li>
-                                        <li>Consolidación de documentos.</li>
-                                        <li>Envío anual al SIN.</li>
-                                    </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20necesito%20bancarizacion" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
-                                </div>
-                                <div class="service-image">
-                                    <img src="assets/img/bancarizacion.jpg" alt="Bancarización" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-square-item" id="ser-9" onclick="toggleSquare(this)">
-                        <div class="square-preview">
-                            <i class="ph-duotone ph-handshake service-icon-lg"></i>
-                            <h3>Facilidades Pago</h3>
-                            <span class="tap-hint">Ver más +</span>
-                        </div>
-                        <div class="square-content">
-                            <div class="service-expanded-wrapper">
-                                <div class="service-text">
-                                    <h3>Gestión de Deudas</h3>
-                                    <p>Tramitación de planes de pago (FAP) por deudas tributarias pendientes.</p>
-                                    <ul class="feature-list">
-                                        <li>Solicitud ante el SIN.</li>
-                                        <li>Cálculo de cuotas.</li>
-                                        <li>Seguimiento de cumplimiento.</li>
-                                    </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20necesito%20facilidades%20de%20pago" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
-                                </div>
-                                <div class="service-image">
-                                    <img src="assets/img/deudas.jpg" alt="Deudas Tributarias" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-square-item" id="ser-10" onclick="toggleSquare(this)">
-                        <div class="square-preview">
-                            <i class="ph-duotone ph-identification-card service-icon-lg"></i>
-                            <h3>Gestión NIT</h3>
-                            <span class="tap-hint">Ver más +</span>
-                        </div>
-                        <div class="square-content">
-                            <div class="service-expanded-wrapper">
-                                <div class="service-text">
-                                    <h3>Padrón Biométrico</h3>
-                                    <p>Actualización de datos y modificaciones en el Padrón Nacional de Contribuyentes.</p>
-                                    <ul class="feature-list">
-                                        <li>Cambio de dirección.</li>
-                                        <li>Apertura de sucursales.</li>
-                                        <li>Inactivación o baja de NIT.</li>
-                                    </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20necesito%20tramites%20de%20NIT" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
-                                </div>
-                                <div class="service-image">
-                                    <img src="assets/img/nit.jpg" alt="Gestión NIT" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="group-title">Consultores</h2>
-                <div class="services-expand-grid">
-                    
-                    <div class="service-square-item" id="ser-11" onclick="toggleSquare(this)">
-                        <div class="square-preview">
-                            <i class="ph-duotone ph-briefcase service-icon-lg"></i>
-                            <h3>Independientes</h3>
-                            <span class="tap-hint">Ver más +</span>
-                        </div>
-                        <div class="square-content">
-                            <div class="service-expanded-wrapper">
-                                <div class="service-text">
-                                    <h3>Asesoría Especializada</h3>
-                                    <p>Servicio integral para consultores en línea y profesionales libres.</p>
-                                    <ul class="feature-list">
-                                        <li>Declaración Trimestral (Form 610).</li>
-                                        <li>Declaración Mensual (Form 200/400).</li>
-                                        <li>Presentación de Facturas (Form 110).</li>
-                                    </ul>
-                                    <a href="https://wa.me/59171600722?text=Hola,%20soy%20consultor%20y%20necesito%20asesoria" class="btn-service-cta" target="_blank">
-                                        Cotizar este servicio <i class="ph-bold ph-whatsapp-logo"></i>
-                                    </a>
-                                </div>
-                                <div class="service-image">
-                                    <img src="assets/img/independientes.jpg" alt="Independientes" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+Servicio'">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+                </div> </div>
         </div>
     </main>
 
@@ -374,6 +225,7 @@
                     <h3>CONSULTORÍA YINEH</h3>
                     <p>Tu aliada estratégica en contabilidad y finanzas. Comprometidos con el crecimiento ordenado y legal de tu empresa en Bolivia.</p>
                 </div>
+                
                 <div class="footer-col">
                     <h3>ENLACES</h3>
                     <ul class="footer-links">
@@ -383,11 +235,13 @@
                         <li><a href="blog.html">Blog de Noticias</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col footer-contact-info">
                     <h3>CONTACTO</h3>
                     <p>Santa Cruz, Bolivia</p>
                     <p><a href="tel:+59171600722">+591 716 00722</a></p>
                     <p><a href="mailto:yirehestudio@gmail.com">yirehestudio@gmail.com</a></p>
+                    
                     <div class="social-row">
                         <a href="#" class="social-btn"><i class="ph-bold ph-facebook-logo"></i></a>
                         <a href="#" class="social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
@@ -395,15 +249,17 @@
                     </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>© 2026 CONSULTORÍA YINEH. TODOS LOS DERECHOS RESERVADOS.</p>
             </div>
         </div>
     </footer>
 
-<a href="https://wa.me/59171600722" class="wa-float" target="_blank">
-    <img src="assets/img/WhatsApp-logo.png" alt="Contactar por WhatsApp">
-</a>
+    <a href="https://wa.me/59171600722" class="wa-float" target="_blank">
+        <img src="assets/img/whatsapp-logo.svg" alt="Contactar por WhatsApp">
+    </a>
+    
     <script src="js/main.js"></script>
     <script src="js/servicios.js"></script>
 </body>
