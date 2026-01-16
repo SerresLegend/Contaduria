@@ -1,161 +1,191 @@
 /* --- ESTILOS DE PÁGINA: NOSOTROS (TEMA OSCURO - AZUL) --- */
 
 /* CABECERA */
-.about-hero { 
-    text-align: center; 
-    padding: 160px 0 60px; 
+.about-hero {
+  text-align: center;
+  padding: 160px 0 60px;
 }
 
-.about-hero h1 { 
-    font-size: 3.5rem; 
-    color: var(--white); /* Blanco */
-    margin-bottom: 20px; 
-    line-height: 1.1; 
+.about-hero h1 {
+  font-size: 3.5rem;
+  color: var(--white); /* Blanco */
+  margin-bottom: 20px;
+  line-height: 1.1;
 }
 
-.about-hero p { 
-    font-size: 1.2rem; 
-    color: var(--text-dim); /* Gris claro */
-    max-width: 700px; 
-    margin: 0 auto; 
+.about-hero p {
+  font-size: 1.2rem;
+  color: var(--text-dim); /* Gris claro */
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* GRILLA MISIÓN/VISIÓN */
-.about-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 60px; 
-    margin: 80px 0; 
-    align-items: flex-start; 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 80px 0;
+  align-items: flex-start;
 }
 
-.about-img { 
-    width: 100%; 
-    border-radius: 20px; 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
-    transition: 0.3s;
+.about-img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 
-.about-img:hover { transform: scale(1.02); }
+.about-img:hover {
+  transform: scale(1.02);
+}
 
 /* Bloques de Texto */
-.text-block { 
-    margin-bottom: 40px; 
+.text-block {
+  margin-bottom: 40px;
 }
 
-.text-block h2 { 
-    font-size: 1.8rem; 
-    margin-bottom: 15px; 
-    color: var(--white); /* Blanco */
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.text-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--white); /* Blanco */
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.text-block h2 i { 
-    color: var(--accent-cyan); 
-    font-size: 2rem;
+.text-block h2 i {
+  color: var(--accent-cyan);
+  font-size: 2rem;
 }
 
-.text-block p { 
-    color: #cbd5e1; /* Gris legible en oscuro */
-    margin-bottom: 15px; 
-    font-size: 1.05rem; 
-    line-height: 1.7;
-    text-align: justify; 
+.text-block p {
+  color: #cbd5e1; /* Gris legible en oscuro */
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify;
 }
 
 .text-block strong {
-    color: var(--white);
-    font-weight: 700;
+  color: var(--white);
+  font-weight: 700;
 }
 
 /* SECCIÓN EQUIPO */
-.team-section { 
-    background: rgba(2, 6, 23, 0.5); /* Fondo oscuro sutil */
-    padding: 100px 0; 
-    margin-top: 80px; 
-    border-top: 1px solid rgba(255,255,255,0.1); 
+.team-section {
+  background: rgba(2, 6, 23, 0.5); /* Fondo oscuro sutil */
+  padding: 100px 0;
+  margin-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Caja de Liderazgo (Tema Oscuro) */
 .leadership-box-light {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    background: rgba(255, 255, 255, 0.03); /* Transparente oscuro */
-    border-radius: 24px;
-    padding: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: rgba(255, 255, 255, 0.03); /* Transparente oscuro */
+  border-radius: 24px;
+  padding: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.leader-info { flex: 1; }
+.leader-info {
+  flex: 1;
+}
 
 .leader-badge {
-    color: var(--accent-cyan);
-    font-weight: 800;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-    display: block;
-    margin-bottom: 15px;
+  color: var(--accent-cyan);
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 15px;
 }
 
 .leader-info h3 {
-    font-size: 2.8rem;
-    color: var(--white); /* Texto blanco */
-    margin-bottom: 25px;
-    line-height: 1.1;
+  font-size: 2.8rem;
+  color: var(--white); /* Texto blanco */
+  margin-bottom: 25px;
+  line-height: 1.1;
 }
 
 .leader-desc {
-    color: #94a3b8;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 40px;
-    font-style: italic;
-    border-left: 4px solid var(--accent-cyan);
-    padding-left: 25px;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-style: italic;
+  border-left: 4px solid var(--accent-cyan);
+  padding-left: 25px;
 }
 
-.leader-details { display: flex; gap: 30px; }
+.leader-details {
+  display: flex;
+  gap: 30px;
+}
 
 .detail-item {
-    display: flex; align-items: center; gap: 10px;
-    color: var(--white);
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font-weight: 600;
 }
 
-.detail-item i { color: var(--accent-cyan); font-size: 1.5rem; }
+.detail-item i {
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+}
 
 .leader-img-container {
-    flex: 0 0 350px;
-    height: 500px;
-    position: relative;
+  flex: 0 0 350px;
+  height: 500px;
+  position: relative;
 }
 
 .leader-portrait {
-    width: 100%; height: 100%; object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 20px 20px 0 rgba(56, 189, 248, 0.1); /* Sombra Cyan */
-    transition: 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 20px 20px 0 rgba(56, 189, 248, 0.1); /* Sombra Cyan */
+  transition: 0.4s ease;
 }
 
 .leadership-box-light:hover .leader-portrait {
-    transform: translateY(-5px);
-    box-shadow: 20px 25px 0 rgba(56, 189, 248, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 20px 25px 0 rgba(56, 189, 248, 0.2);
 }
 
-@media(max-width: 900px) { 
-    .about-grid { grid-template-columns: 1fr; } 
-    .about-hero h1 { font-size: 2.5rem; }
-    
-    .leadership-box-light {
-        flex-direction: column-reverse;
-        padding: 30px;
-        text-align: center;
-    }
-    .leader-desc { border-left: none; padding-left: 0; }
-    .leader-details { justify-content: center; flex-wrap: wrap; }
-    .leader-img-container { width: 100%; height: 400px; flex: auto; }
-    .leader-portrait { box-shadow: none; }
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .leadership-box-light {
+    flex-direction: column-reverse;
+    padding: 30px;
+    text-align: center;
+  }
+  .leader-desc {
+    border-left: none;
+    padding-left: 0;
+  }
+  .leader-details {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .leader-img-container {
+    width: 100%;
+    height: 400px;
+    flex: auto;
+  }
+  .leader-portrait {
+    box-shadow: none;
+  }
 }
