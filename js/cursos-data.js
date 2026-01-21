@@ -3,7 +3,7 @@ const cursosData = [
         id: 1,
         titulo: "Bancarización Gestión 2026 • SIAT",
         precio: "150 Bs", // Precio estimado, ajustar si es distinto
-        imagen: "assets/img/bancarizacion.jpeg", 
+        imagen: "assets/img/Bancarizacion.jpeg", 
         descripcion_corta: "Domina el control y declaración de operaciones mayores a 50k Bs para evitar sanciones tributarias.",
         descripcion_larga: `
             <p>Este curso práctico está enfocado en la correcta aplicación de la normativa de Bancarización para la gestión 2026. Aprenderás a identificar operaciones obligatorias y a reportarlas sin errores en el sistema SIAT.</p>
