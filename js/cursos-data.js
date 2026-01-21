@@ -2,7 +2,7 @@ const cursosData = [
     {
         id: 1,
         titulo: "Bancarización Gestión 2026 • SIAT",
-        precio: "150 Bs", // Precio estimado, ajustar si es distinto
+        precio: "169 Bs", // Precio estimado, ajustar si es distinto
         imagen: "assets/img/Bancarizacion.png", 
         descripcion_corta: "Domina el control y declaración de operaciones mayores a 50k Bs para evitar sanciones tributarias.",
         descripcion_larga: `
@@ -28,7 +28,7 @@ const cursosData = [
     {
         id: 2,
         titulo: "Declaración Formulario 608 v4 y 110 v4",
-        precio: "100 Bs", // Precio estimado
+        precio: "129 Bs", // Precio estimado
         imagen: "assets/img/Declaración Formulario 608.jpeg",
         descripcion_corta: "Especialízate como Agente de Retención RC-IVA y el correcto llenado de descargos.",
         descripcion_larga: `
@@ -52,7 +52,7 @@ const cursosData = [
     {
         id: 3,
         titulo: "Facturación SIAT en Línea: Instalación y Uso",
-        precio: "120 Bs", // Precio estimado
+        precio: "129 Bs", // Precio estimado
         imagen: "assets/img/Facturacion Sian en linea.jpeg",
         descripcion_corta: "Guía completa para implementar la Facturación Electrónica en tu negocio o para tus clientes.",
         descripcion_larga: `
