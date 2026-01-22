@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artículo | YINEH Consultoría</title>
+    <title>Artículo | YIREH Consultoría</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -19,7 +19,7 @@
         <div class="nav-container">
             <div class="nav-left">
                 <a href="index.html" class="logo">
-                    <img src="assets/fondo azul logo.png" alt="YINEH">
+                    <img src="assets/fondo azul logo.png" alt="YIREH">
                 </a>
                 
                 <nav>
@@ -58,11 +58,48 @@
     </header>
 
 
-    <main>
-      <div class="container">
-        <article class="article-reader" id="article-reader"></article>
-      </div>
-    </main>
+  <main>
+    <div class="container">
+        <div class="blog-layout-wrapper">
+            
+            <aside class="sidebar-social">
+    <a href="#" class="social-circle facebook" aria-label="Facebook">
+        <i class="ph-bold ph-facebook-logo"></i>
+    </a>
+    
+    <a href="#" class="social-circle whatsapp" aria-label="WhatsApp">
+        <i class="ph-bold ph-whatsapp-logo"></i>
+    </a>
+    
+    <a href="#" class="social-circle linkedin" aria-label="LinkedIn">
+        <i class="ph-bold ph-linkedin-logo"></i>
+    </a>
+
+    <a href="#" class="social-circle twitter" aria-label="Twitter">
+        <i class="ph-bold ph-x-logo"></i>
+    </a>
+
+    <a href="#" class="social-circle copy-link" aria-label="Copiar Enlace" onclick="copyLink()">
+        <i class="ph-bold ph-link"></i>
+    </a>
+</aside>
+
+            <article class="article-reader" id="article-reader">
+                </article>
+
+            <aside class="sidebar-courses">
+                <div class="sidebar-widget">
+                    <h3>Capacítate con YIREH</h3>
+                    <p class="promo-text">Domina estos temas con nuestros cursos prácticos.</p>
+                    <div id="mini-courses-list" class="mini-courses-grid">
+                        </div>
+                    <a href="cursos.html" class="btn-all-courses">Ver todos los cursos</a>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</main>
 
 <footer class="main-footer">
       <div class="container">
@@ -70,7 +107,7 @@
         <div class="footer-grid">
           
           <div class="footer-col">
-            <h3>CONSULTORÍA YINEH</h3>
+            <h3>CONSULTORÍA YIREH</h3>
             <p>
               Tu aliada estratégica en contabilidad y finanzas. Comprometidos
               con el crecimiento ordenado y legal de tu empresa en Bolivia.
@@ -109,12 +146,16 @@
               <a href="https://www.linkedin.com/company/yireh-consultoria/?originalSubdomain=bo" class="social-btn" aria-label="LinkedIn">
                 <i class="ph-bold ph-linkedin-logo"></i>
               </a>
+
+              <a href="https://youtube.com/@yirehcontabilidadtributaria?si=WmduUbThsh8M-ief" class="social-btn" aria-label="YouTube" target="_blank">
+                <i class="ph-bold ph-youtube-logo"></i>
+              </a>
             </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>© 2026 CONSULTORÍA YINEH. TODOS LOS DERECHOS RESERVADOS.</p>
+          <p>© 2026 YIREH CONSULTORA. TODOS LOS DERECHOS RESERVADOS.</p>
         </div>
       </div>
     </footer>
@@ -122,5 +163,6 @@
     <script src="js/main.js"></script>
     <script src="js/blog-data.js"></script>
     <script src="js/blog.js"></script>
+    <script src="js/cursos-data.js"></script>
   </body>
 </html>

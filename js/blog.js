@@ -1,3 +1,4 @@
+// ...existing code...
 document.addEventListener("DOMContentLoaded", () => {
     
     // 1. SI ESTAMOS EN LA LISTA (BLOG.HTML)
@@ -65,4 +66,36 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }
     }
-});
+
+    // 3. (NUEVO) RENDERIZAR SIDEBAR DE CURSOS (Solo en detalle)
+    const sidebarContainer = document.getElementById('mini-courses-list');
+    
+    // Verificamos si existe el contenedor y si tenemos datos de cursos
+    if (sidebarContainer && typeof cursosData !== 'undefined') {
+        sidebarContainer.innerHTML = '';
+        
+        // Tomamos solo los primeros 3 cursos para no saturar
+        const cursosDestacados = cursosData.slice(0, 3);
+        
+        cursosDestacados.forEach(curso => {
+            const html = `
+                <a href="curso-detalle.html?id=${curso.id}" class="mini-course-card">
+                    <img src="${curso.imagen}" alt="${curso.titulo}" class="mini-course-img">
+                    <div class="mini-course-info">
+                        <h4>${curso.titulo}</h4>
+                        <span class="mini-course-price">${curso.precio}</span>
+                    </div>
+                </a>
+            `;
+            sidebarContainer.innerHTML += html;
+        });
+    }
+
+}); 
+// ...existing code...
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert("¡Enlace copiado al portapapeles!");
+    });
+}
+// ...existing code...

@@ -1,17 +1,45 @@
 /* --- ESTILOS GENERALES CURSOS (TEMA OSCURO) --- */
 .cursos-hero {
   text-align: center;
-  padding: 160px 0 60px;
-  background: transparent;
+  padding: 180px 0 80px;
+  /* Luz sutil detrás del texto */
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+}
+
+.cursos-hero .badge {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--accent-cyan);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); /* Pequeño brillo */
 }
 .cursos-hero h1 {
-  font-size: 3rem;
-  color: var(--white);
+  font-size: 4rem;
+  font-weight: 900;
   margin-bottom: 20px;
+  line-height: 1.1;
+  
+  /* Truco para el texto gradiente */
+  background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Sombra para que no se pierda */
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
 }
 .cursos-hero p {
-  color: var(--text-dim);
-  font-size: 1.2rem;
+  color: #cbd5e1;
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* --- GRILLA DE CURSOS (CAMBIO CLAVE AQUÍ) --- */

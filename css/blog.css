@@ -218,3 +218,177 @@
     justify-content: center;
   }
 }
+
+/* --- LAYOUT DE 3 COLUMNAS PARA EL DETALLE --- */
+.blog-layout-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 140px;
+    margin-bottom: 100px;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* LECTOR CENTRAL */
+.article-reader {
+    flex: 1;
+    margin: 0 !important;
+    max-width: 100%;
+}
+
+/* --- COLUMNA IZQUIERDA: SOCIALES (Solo botones) --- */
+.sidebar-social {
+    width: 60px;
+    position: sticky;
+    top: 150px; /* Un poco más abajo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Ocultamos la etiqueta de texto si existía, o la borras del HTML */
+.share-label {
+    display: none; 
+}
+
+.social-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+    /* Fondo semitransparente por defecto */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-circle:hover {
+    transform: scale(1.15);
+    border-color: transparent;
+}
+
+/* Colores al pasar el mouse (Hover) */
+.social-circle.facebook:hover { background: #1877F2; }
+.social-circle.whatsapp:hover { background: #25D366; }
+.social-circle.linkedin:hover { background: #0A66C2; }
+.social-circle.twitter:hover { background: #000000; border-color: white; }
+.social-circle.copy-link:hover { background: var(--accent-cyan); color: #020617; }
+
+
+/* --- COLUMNA DERECHA: CURSOS (Sin Fondo Blanco) --- */
+.sidebar-courses {
+    width: 320px;
+    position: sticky;
+    top: 150px;
+}
+
+.sidebar-widget {
+    /* QUITAMOS EL FONDO BLANCO */
+    background: transparent; 
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.sidebar-widget h3 {
+    font-size: 1.3rem;
+    color: var(--white); /* Texto blanco */
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.promo-text {
+    font-size: 0.9rem;
+    color: var(--text-dim); /* Gris claro */
+    margin-bottom: 25px;
+}
+
+.mini-courses-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Mini Tarjeta de Curso (Adaptada a Oscuro) */
+.mini-course-card {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    padding-bottom: 20px;
+    /* Línea separadora sutil */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    transition: 0.3s;
+    align-items: center;
+}
+
+.mini-course-card:last-child {
+    border-bottom: none;
+}
+
+.mini-course-card:hover {
+    transform: translateX(5px);
+    /* Al hacer hover, iluminamos un poco el texto */
+    opacity: 1;
+}
+
+.mini-course-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.mini-course-info h4 {
+    font-size: 1rem;
+    color: var(--white); /* Título blanco */
+    line-height: 1.4;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.mini-course-price {
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+    font-weight: 800;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.btn-all-courses {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-all-courses:hover {
+    background: var(--accent-cyan);
+    color: #020617;
+    border-color: var(--accent-cyan);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .sidebar-social, .sidebar-courses {
+        display: none;
+    }
+    .blog-layout-wrapper {
+        display: block;
+    }
+}
+
