@@ -17,7 +17,7 @@ const blogPosts = [
         title: "Bancarización: ¿Cuándo es obligatorio usar el Módulo Da Vinci?",
         date: "05 Febrero, 2026",
         category: "NORMATIVA",
-        image: "assets/img/Normativa.png", // Foto temporal o usa una de stock
+        image: "assets/img/normativa.png", // Foto temporal o usa una de stock
         content: `
             <p>La bancarización no es opcional para transacciones grandes. Según la normativa vigente, cualquier pago por compra o venta de bienes y servicios cuyo valor sea igual o mayor a <strong>Bs 50.000</strong> debe contar con un documento de pago financiero.</p>
             <h3>Riesgos de no bancarizar</h3>
@@ -30,7 +30,7 @@ const blogPosts = [
         title: "Beneficios de externalizar tu Contabilidad en 2026",
         date: "20 Febrero, 2026",
         category: "GESTIÓN",
-        image: "assets/img/Gestion.png", // Foto temporal
+        image: "assets/img/gestion.png", // Foto temporal
         content: `
             <p>Muchas PyMEs en Santa Cruz siguen manejando su contabilidad "en casa" sin expertos. Esto suele llevar a errores en los balances que cuestan caro a largo plazo.</p>
             <p>Al contratar una consultora externa como YINEH, obtienes:</p>
@@ -46,7 +46,7 @@ const blogPosts = [
         title: "Facturación Electrónica en Línea: Nuevos plazos del SIN",
         date: "28 Febrero, 2026",
         category: "TECNOLOGÍA",
-        image: "assets/img/Tecnologia.png", // Foto temporal
+        image: "assets/img/tecnologia.png", // Foto temporal
         content: `
             <p>La digitalización avanza. El SIN ha emitido una nueva resolución normativa de directorio ampliando los grupos de contribuyentes que deben migrar a la modalidad de Facturación Electrónica en Línea.</p>
             <h3>¿Qué implica el cambio?</h3>
