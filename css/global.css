@@ -1,0 +1,494 @@
+/* ==========================================================================
+   CONFIGURACIÓN GLOBAL Y VARIABLES (CSS VARIABLES)
+   Definimos colores y fuentes en :root para facilitar cambios masivos.
+   ========================================================================== */
+:root {
+  /* Paleta de Colores Principal */
+  --bg-dark: #020617; /* Fondo base tema oscuro */
+  --accent-cyan: #38bdf8; /* Color de acento (botones, iconos) */
+  --white: #ffffff; /* Texto claro */
+  --text-dim: #94a3b8; /* Texto secundario (grisáceo) */
+  --text-dark: #0f172a; /* Texto para fondos claros */
+
+  /* Variables específicas del Header (Vidrio esmerilado) */
+  --header-bg-dark: rgba(2, 6, 23, 0.9);
+  --header-bg-light: rgba(255, 255, 255, 0.95);
+
+  /* Configuraciones de UI */
+  --transicion: all 0.3s ease;
+  --font-main: "Inter", sans-serif;
+}
+
+/* ==========================================================================
+   RESET CSS
+   Eliminamos márgenes por defecto para tener control total del layout.
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+
+body {
+  font-family: var(--font-main);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden; /* Evita scroll horizontal indeseado */
+  display: flex;
+  flex-direction: column; /* Permite usar margin-top: auto en el footer */
+}
+
+/* ==========================================================================
+   SISTEMA DE TEMAS (DARK / LIGHT)
+   Manejamos dos apariencias visuales según la clase del body.
+   ========================================================================== */
+
+/* --- TEMA OSCURO (Por defecto en Inicio/Blog/Cursos) --- */
+body.theme-dark {
+  background-color: var(--bg-dark);
+  color: var(--white);
+  /* Fondo complejo: Gradientes radiales para simular luces ambientales ("Glow") */
+  background-image:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(56, 189, 248, 0.08) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 90%,
+      rgba(6, 182, 212, 0.05) 0%,
+      transparent 40%
+    );
+}
+
+/* --- TEMA CLARO (Usado en Nosotros/Servicios) --- */
+body.theme-light {
+  background-color: #f8fafc;
+  color: var(--text-dark);
+  background-image: radial-gradient(circle at 50% 0%, #e2e8f0 0%, #f8fafc 70%);
+}
+
+/* Sobrescritura de estilos del Header para el Tema Claro */
+body.theme-light header {
+  background: var(--header-bg-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+body.theme-light .nav-links a {
+  color: var(--text-dark);
+  opacity: 0.7;
+}
+body.theme-light .nav-links a:hover,
+body.theme-light .nav-links a.active {
+  color: #0284c7;
+  opacity: 1;
+}
+body.theme-light .logo {
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   HEADER Y NAVEGACIÓN
+   Diseño fijo (sticky) con efecto blur.
+   ========================================================================== */
+header {
+  backdrop-filter: blur(12px); /* Efecto de vidrio esmerilado */
+  -webkit-backdrop-filter: blur(12px); /* Soporte Safari */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que siempre esté encima de todo */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Agrupación Izquierda (Logo + Links) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.logo img {
+  height: auto;
+  max-height: 85px; /* Control de altura para evitar desbordes */
+  width: auto;
+  object-fit: contain;
+}
+
+.logo span {
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Menú Desktop */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.7;
+  transition: var(--transicion);
+}
+.nav-links a:hover,
+.nav-links a.active {
+  opacity: 1;
+  color: var(--accent-cyan);
+}
+
+/* ==========================================================================
+   BOTÓN DE ACCIÓN (HEADER) - ESTILO "CALYPSO"
+   Diseñado para alta conversión visual.
+   ========================================================================== */
+.btn-header {
+  text-decoration: none;
+  /* Gradiente diagonal para dar volumen */
+  background: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 100%);
+  color: #020617;
+
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: none;
+
+  /* Glow externo para llamar la atención */
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+}
+
+.btn-header i {
+  font-size: 1.2rem;
+}
+
+.btn-header:hover {
+  /* Al hacer hover, el botón brilla más y sube ligeramente */
+  background: linear-gradient(135deg, #67e8f9 0%, #38bdf8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(34, 211, 238, 0.6);
+  color: #020617;
+}
+
+/* Ajuste de sombra para el tema claro */
+body.theme-light .btn-header {
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+}
+
+/* ==========================================================================
+   CLASES UTILITARIAS Y COMPONENTES REUTILIZABLES
+   ========================================================================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1; /* Empuja el footer hacia abajo si hay poco contenido */
+}
+
+/* Botón Primario Genérico */
+.btn-primary {
+  background: var(--accent-cyan);
+  color: #020617;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transicion);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* ==========================================================================
+   FOOTER (PIE DE PÁGINA)
+   Diseño de 3 columnas asimétricas.
+   ========================================================================== */
+.main-footer {
+  background: #061e44; /* Azul sólido corporativo */
+  color: white;
+  padding: 80px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  /* 1.5fr para la marca (más ancha), 1fr para el resto */
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.footer-col h3 {
+  color: var(--accent-cyan);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.footer-col p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* Lista de Enlaces del Footer */
+.footer-links {
+  list-style: none;
+}
+.footer-links li {
+  margin-bottom: 12px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+.footer-links a:hover {
+  color: var(--accent-cyan);
+  padding-left: 5px; /* Pequeño desplazamiento al hover */
+}
+
+.footer-contact-info p {
+  margin-bottom: 15px;
+}
+.footer-contact-info a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+/* Botones Redondos de Redes Sociales */
+.social-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+.social-btn {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Círculo perfecto */
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+.social-btn:hover {
+  background: var(--accent-cyan);
+  color: #020617;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   BOTÓN FLOTANTE WHATSAPP
+   Elemento fijo en la esquina inferior derecha.
+   ========================================================================== */
+.wa-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.wa-float img {
+  width: 65px;
+  height: 65px;
+  display: block;
+  /* Sombra realista PNG */
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+.wa-float:hover {
+  transform: scale(1.1) rotate(-5deg); /* Efecto de "saludo" */
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS Y MÓVILES)
+   Ajustes para pantallas menores a 900px.
+   ========================================================================== */
+
+/* Botón Hamburguesa (Solo visible en móvil) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+body.theme-light .menu-toggle {
+  color: var(--text-dark);
+}
+
+/* Menú Desplegable Móvil (Full Screen) */
+.mobile-menu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 0; /* Oculto inicialmente */
+  background: rgba(2, 6, 23, 0.98);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu.active {
+  height: calc(100vh - 80px); /* Se expande */
+}
+
+/* Enlaces Móviles */
+.mobile-links {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mobile-links li {
+  margin: 25px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s;
+}
+/* Animación escalonada al abrir */
+.mobile-menu.active .mobile-links li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 800;
+  transition: 0.3s;
+}
+.mobile-links a:hover {
+  color: var(--accent-cyan);
+}
+
+/* Botón Contacto dentro del menú móvil */
+.btn-mobile-contact {
+  background: var(--accent-cyan);
+  color: #020617;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.mobile-menu.active .btn-mobile-contact {
+  opacity: 1;
+}
+
+/* Breakpoint 900px */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  } /* Ocultar menú desktop */
+  .desktop-only {
+    display: none;
+  } /* Ocultar botón header desktop */
+  .menu-toggle {
+    display: block;
+  } /* Mostrar hamburguesa */
+
+  .nav-left {
+    gap: 15px;
+  }
+
+  /* Logo más pequeño en pantallas chicas */
+  .logo img {
+    max-height: 40px;
+  }
+
+  header {
+    padding: 0 10px;
+  }
+
+  /* Footer pasa a 1 sola columna */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-col p {
+    margin: 0 auto 15px;
+  }
+  .social-row {
+    justify-content: center;
+  }
+}
